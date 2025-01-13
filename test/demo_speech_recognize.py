@@ -41,11 +41,11 @@ async def test_speech_recognise():
     def handler(msg: SpeechRecogniseResponse):
         print(f'=======handle speech recognise:{msg}')
         print("{0}".format(str(msg.text)))
-        if str(msg.text).lower() == "hello":
+        if str(msg.text).lower() == "hello.":
             # "hello" is monitored, tts say hello
             asyncio.create_task(__tts())
 
-        elif str(msg.text).lower() == "stop":
+        elif str(msg.text).lower() == "stop.":
             # Listen "stop", stop monitoring
             observe.stop()
             # stop event_loop

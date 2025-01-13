@@ -89,7 +89,7 @@ async def test_play_online_audio():
     """
     # Play sound effects, url indicates the list of sound effects to be played
     block: PlayAudio = PlayAudio(
-        url="http://hao.haolingsheng.com/ring/000/995/52513bb6a4546b8822c89034afb8bacb.mp3",
+        url="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/arrow.mp3",
         storage_type=AudioStorageType.NET_PUBLIC)
     # response是个PlayAudioResponse
     (resultType, response) = await block.execute()
@@ -113,7 +113,7 @@ async def test_play_local_audio():
     """
 
     block: PlayAudio = PlayAudio(
-        url="read_016",
+        url="011_photograph",
         storage_type=AudioStorageType.PRESET_LOCAL)
     # response是个PlayAudioResponse
     (resultType, response) = await block.execute()
